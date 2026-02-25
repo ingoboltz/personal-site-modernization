@@ -1,0 +1,113 @@
+.navlevel1  {
+	font-family : sans-serif;
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : bolder;
+	color : CC3300;
+}
+
+.navlevel1a  {
+	font-family : sans-serif;
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : bold;
+}
+
+.navlevel2  {
+	font-family : sans-serif;
+	font-size : 10pt;
+	text-decoration : none;
+	font-weight : normal;
+	color : CC3300;
+}
+
+A:hover {
+    text-decoration: underline;
+}
+
+h2  {
+	font-family : sans-serif;
+	color : CC3300;
+}
+
+h3  {
+	font-family : sans-serif;
+	font-style : normal;
+	color : CC3300;
+	font-weight : normal;
+	text-align : left;
+	line-height : 120%;
+}
+
+.sectionCV  {
+	font-family : sans-serif;
+	font-style : normal;
+	color : CC3300;
+	font-weight : bold;
+	text-align : left;
+	padding-top: 25px;
+	padding-bottom: 5px
+	line-height : 120%;
+}
+
+.text  {
+	font-family : sans-serif;
+	font-size : 10pt;
+	color : #000000;
+}
+
+.companyHeader  {
+	font-family : sans-serif;
+	font-weight : bold;
+	font-size : 11pt;
+	color : Black;
+	text-align : left;
+	text-indent : 0;
+	list-style-type : none;
+	list-style-position : inside;
+	margin-top : 27pt;
+	margin-bottom : -8pt;
+}
+
+.workDescription  {
+	font-family : sans-serif;
+	font-size : 10pt;
+	font-weight : normal;
+	font-style : normal;
+	color : Black;
+	text-decoration : none;
+	text-align : left;
+	text-indent : kein;
+	list-style-type : circle;
+	list-style-position : inside;
+	list-style : circle;
+	margin-bottom : -8pt;
+}
+
+.myphoto  {
+	margin-right : 100pt;
+}
+.clientHeader {
+	font-family : sans-serif;
+	font-weight : bold;
+	font-size : 10pt;
+	color : Black;
+	text-align : left;
+	text-indent : 0;
+	list-style-type : none;
+	list-style-position : inside;
+	margin-top : 15pt;
+	margin-bottom : -8pt;
+	font-style: italic;
+
+}
+.recomm {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-style: oblique;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FF3300;
+}

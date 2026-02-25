@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "You need a password. Email me. :)"
+AuthUserFile "/home/ingobolt/.htpasswds/i-files/consult/passwd"
+require valid-user
