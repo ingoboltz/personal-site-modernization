@@ -1,18 +1,144 @@
 ---
-const title = 'Modern Static Sandbox';
+const title = 'Ingo Boltz Personal Homepage';
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Ingo Boltz Personal Page: CV, Reports from Volunteering in Africa, Photos & Stories"
+    />
+    <style>
+      :global(*) {
+        box-sizing: border-box;
+      }
+
+      :global(body) {
+        margin: 0;
+        background: #ffcc66;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+      }
+
+      :global(a:link) {
+        text-decoration: none;
+        color: #cc3300;
+      }
+
+      :global(a:visited) {
+        text-decoration: none;
+        color: #cc3300;
+      }
+
+      :global(a:active) {
+        text-decoration: none;
+        color: red;
+      }
+
+      :global(a:hover) {
+        text-decoration: underline;
+        color: red;
+      }
+
+      .legacy-shell {
+        width: 760px;
+        border-collapse: collapse;
+      }
+
+      .spacer-cell {
+        width: 10px;
+      }
+
+      .logo-cell {
+        width: 150px;
+        vertical-align: top;
+      }
+
+      .header-space {
+        width: 600px;
+        height: 75px;
+      }
+
+      .left-space {
+        width: 20px;
+      }
+
+      .hero-cell {
+        width: 390px;
+        vertical-align: middle;
+      }
+
+      .hero-image {
+        width: 390px;
+        height: 370px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .text-cell {
+        vertical-align: top;
+        padding-left: 8px;
+      }
+
+      h2 {
+        margin: 0.83em 0;
+        font-size: 1.5em;
+      }
+
+      h3 {
+        margin: 1em 0;
+        font-size: 1.17em;
+      }
+
+      .empty-line {
+        display: block;
+        height: 1.2em;
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <h1>{title}</h1>
-      <p>This is an isolated Astro sandbox under <code>/modern</code>.</p>
-      <p>No legacy files were changed.</p>
-    </main>
+    <table class="legacy-shell" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="spacer-cell"><img src="/img/spc.gif" alt="" width="10" height="1" /></td>
+        <td class="logo-cell">
+          <a href="/">
+            <img src="/img/logo.gif" alt="" width="150" height="75" />
+          </a>
+        </td>
+        <td class="header-space"><img src="/img/spc.gif" alt="" width="600" height="75" /></td>
+      </tr>
+      <tr>
+        <td><img src="/img/spc.gif" alt="" class="left-space" width="20" height="200" /></td>
+        <td class="hero-cell">
+          <img
+            class="hero-image"
+            src="/img/ingo_face.jpg"
+            alt="The Choice is yours"
+            width="390"
+            height="370"
+          />
+        </td>
+        <td class="text-cell">
+          <h2>Welcome to Time and Life of Ingo B!</h2>
+          <h3>Made in 1997 - when the web was 1.0 :-)</h3>
+
+          <span class="empty-line"></span>
+          <span class="empty-line"></span>
+          <span class="empty-line"></span>
+
+          <h3>
+            <a href="http://www.linkedin.com/in/ingoboltz" target="_blank" rel="noreferrer">
+              My most recent CV is now on LinkedIn.
+            </a>
+          </h3>
+
+          <h3><a href="/i-files.html">The old i-files. My personal museum.</a></h3>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
