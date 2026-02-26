@@ -40,3 +40,14 @@ After build completes, output files are generated in:
 - `modern/dist/`
 
 That folder is the static build output for the modern sandbox.
+
+## 5) Legacy homepage asset copy (manual)
+
+To render the modern Astro homepage exactly like the current legacy homepage,
+copy these existing legacy assets into `modern/public/img/`:
+
+- `img/spc.gif`
+- `img/logo.gif`
+- `img/ingo_face.jpg`
+
+The updated Astro page references those files with `/img/...` URLs.
