@@ -1,5 +1,5 @@
 ---
-const title = 'Ingo Boltz Personal Homepage';
+const title = 'Academic record and transcripts';
 ---
 
 <html lang="en">
@@ -8,10 +8,6 @@ const title = 'Ingo Boltz Personal Homepage';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="robots" content="index, follow" />
-    <meta
-      name="description"
-      content="Ingo Boltz Personal Page: CV, Reports from Volunteering in Africa, Photos & Stories"
-    />
     <style>
       :global(*) {
         box-sizing: border-box;
@@ -63,25 +59,24 @@ const title = 'Ingo Boltz Personal Homepage';
         height: 75px;
       }
 
-      .left-space {
-        width: 20px;
+      .left-nav {
+        vertical-align: top;
+        width: 150px;
       }
 
-      .hero-cell {
-        width: 390px;
-        vertical-align: middle;
-      }
-
-      .hero-image {
-        width: 390px;
-        height: 370px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .text-cell {
+      .main-content {
         vertical-align: top;
         padding-left: 8px;
+      }
+
+      .nav-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-list li {
+        margin: 0 0 8px 0;
       }
 
       h2 {
@@ -90,13 +85,12 @@ const title = 'Ingo Boltz Personal Homepage';
       }
 
       h3 {
-        margin: 1em 0;
+        margin: 1em 0 0.35em;
         font-size: 1.17em;
       }
 
-      .empty-line {
-        display: block;
-        height: 1.2em;
+      p {
+        margin: 0 0 1.2em;
       }
     </style>
   </head>
@@ -112,32 +106,26 @@ const title = 'Ingo Boltz Personal Homepage';
         <td class="header-space"><img src="/img/spc.gif" alt="" width="600" height="75" /></td>
       </tr>
       <tr>
-        <td><img src="/img/spc.gif" alt="" class="left-space" width="20" height="200" /></td>
-        <td class="hero-cell">
-          <img
-            class="hero-image"
-            src="/img/ingo_face.jpg"
-            alt="The Choice is yours"
-            width="390"
-            height="370"
-          />
+        <td></td>
+        <td class="left-nav">
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/academic-record/">Academic record and transcripts</a></li>
+            <li><a href="/i-files.html">I-Files</a></li>
+          </ul>
         </td>
-        <td class="text-cell">
-          <h2>Welcome to Time and Life of Ingo B!</h2>
-          <h3>Made in 1997 - when the web was 1.0 :-)</h3>
+        <td class="main-content">
+          <h2>Academic record and transcripts</h2>
 
-          <span class="empty-line"></span>
-          <span class="empty-line"></span>
+          <h3>Master's degree transcript / grades</h3>
+          <p>
+            <a href="/certificate-tu.html">View legacy Master's degree transcript / grades</a>
+          </p>
 
-          <h3>
-            <a href="http://www.linkedin.com/in/ingoboltz" target="_blank" rel="noreferrer">
-              My most recent CV is now on LinkedIn.
-            </a>
-          </h3>
-
-          <h3><a href="/academic-record/">Academic record and transcripts</a></h3>
-
-          <h3><a href="/i-files.html">The old i-files. My personal museum.</a></h3>
+          <h3>U.S. exchange year transcript / grades</h3>
+          <p>
+            <a href="/certificate-bu.html">View legacy U.S. exchange year transcript / grades</a>
+          </p>
         </td>
       </tr>
     </table>
