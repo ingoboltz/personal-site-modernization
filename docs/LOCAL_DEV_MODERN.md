@@ -51,3 +51,13 @@ copy these existing legacy assets into `modern/public/img/`:
 - `img/ingo_face.jpg`
 
 The updated Astro page references those files with `/img/...` URLs.
+
+## 6) Academic record assets copy (manual)
+
+To render `/academic-record/` in the Astro sandbox with migrated legacy transcript content,
+copy these existing legacy assets into `modern/public/img/`:
+
+- `img/tu-diploma.jpg`
+- `img/bu-transcript.gif`
+- `img/diploma.pdf`
+- `img/compare.jpg`
