@@ -1,0 +1,171 @@
+---
+import LegacyShellLayout from '../../layouts/LegacyShellLayout.astro';
+
+const title = 'The I-Files: Time and Life of Ingo B.';
+const legacyBaseUrl = 'https://www.ingoboltz.com';
+---
+
+<LegacyShellLayout
+  title={title}
+  description="The I-Files archive hub: African Journal, travel reports, and sporadic musings."
+>
+  <td class="nav-cell">
+    <table width="137" border="0" cellpadding="0" cellspacing="0">
+      <tr><td width="121"></td></tr>
+      <tr><td></td></tr>
+      <tr><td></td></tr>
+      <tr><td><a href="/i-files/" class="navlevel1">I-Files</a></td></tr>
+
+      <tr><td><img src="/img/spc.gif" width="10" height="1" alt="" /><a href={`${legacyBaseUrl}/i-files/africa.html`} class="navlevel2">African Journal</a></td></tr>
+      <tr><td><img src="/img/spc.gif" width="10" height="1" alt="" /><a href={`${legacyBaseUrl}/i-files/japan.html`} class="navlevel2">Japan Travel</a></td></tr>
+      <tr><td><img src="/img/spc.gif" width="10" height="1" alt="" /><a href={`${legacyBaseUrl}/i-files/australia.html`} class="navlevel2"><nobr>Australia Travel</nobr></a></td></tr>
+      <tr><td><img src="/img/spc.gif" width="10" height="8" alt="" /><a href={`${legacyBaseUrl}/i-files/sporadic.html`} class="navlevel2"><nobr>Sporadic Musings</nobr></a></td></tr>
+      <tr><td><img src="/img/spc.gif" width="10" height="8" alt="" /><a href={`${legacyBaseUrl}/weblog/weblog.html`} class="navlevel2">Argentina</a></td></tr>
+    </table>
+  </td>
+
+  <td class="content-cell">
+    <h3>The I-Files: Time and Life of Ingo B.</h3>
+
+    <p>
+      This is my literary memory box.
+      It started with the African Journal, my regular reports from my time volunteering in South Africa, back in 1998-2000 (!)
+      I got lots of feedback from the readers, so I figured that some of you would continue to be interested in what's happening in my life.
+    </p>
+
+    <p>
+      Since the idea for the journal was born in Pretoria, I named it after J.M. Coetzee's excellent book "Time and Life of Michael K",
+      which is as controversial and difficult, yet as fascinating, as South Africa itself.
+      Go read it! :-)
+    </p>
+
+    <p>
+      On the map below, click on Africa for the <a href={`${legacyBaseUrl}/i-files/africa.html`} class="navlevel1">Journal</a>.
+      There are also links to reports on my travels in <a href={`${legacyBaseUrl}/i-files/japan.html`} class="navlevel1">Japan</a> and
+      <a href={`${legacyBaseUrl}/i-files/australia.html`} class="navlevel1">Australia</a>, as well as some
+      <a href={`${legacyBaseUrl}/i-files/sporadic.html`} class="navlevel1">musings</a> on different events in my life in Europe.
+      Clicking on South America will take you to the
+      <a href={`${legacyBaseUrl}/weblog/weblog.html`} class="navlevel1">Buenos Aires Weblog</a>.
+    </p>
+
+    <img
+      id="world-map-image"
+      class="world-map"
+      src="/img/world_at_night.jpg"
+      usemap="#world-at-night"
+      width="760"
+      height="329"
+      alt="World map with clickable regions for i-files destinations"
+      border="0"
+    />
+
+    <map name="world-at-night" id="world-at-night-map">
+      <area
+        shape="rect"
+        coords="200,182,338,327"
+        href={`${legacyBaseUrl}/weblog/weblog.html`}
+        alt="Buenos Aires Weblog"
+      />
+      <area
+        shape="rect"
+        coords="359,41,469,116"
+        href={`${legacyBaseUrl}/i-files/sporadic.html`}
+        alt="Sporadic musings"
+      />
+      <area
+        shape="rect"
+        coords="401,164,502,291"
+        href={`${legacyBaseUrl}/i-files/africa.html`}
+        alt="The African Journal"
+      />
+      <area
+        shape="rect"
+        coords="649,215,750,299"
+        href={`${legacyBaseUrl}/i-files/australia.html`}
+        alt="Travel report from Australia"
+      />
+      <area
+        shape="rect"
+        coords="684,91,728,137"
+        href={`${legacyBaseUrl}/i-files/japan.html`}
+        alt="Travel report from Japan"
+      />
+    </map>
+
+    <script is:inline>
+      (() => {
+        const mapImage = document.getElementById('world-map-image');
+        const map = document.getElementById('world-at-night-map');
+
+        if (!mapImage || !map) {
+          return;
+        }
+
+        const areas = Array.from(map.querySelectorAll('area'));
+        const originalCoords = areas.map((area) =>
+          (area.getAttribute('coords') || '').split(',').map((value) => Number(value.trim()))
+        );
+
+        const scaleMapAreas = () => {
+          const widthScale = mapImage.clientWidth / mapImage.naturalWidth;
+          const heightScale = mapImage.clientHeight / mapImage.naturalHeight;
+
+          areas.forEach((area, index) => {
+            const scaledCoords = originalCoords[index].map((coordinate, coordinateIndex) => {
+              const scale = coordinateIndex % 2 === 0 ? widthScale : heightScale;
+              return Math.round(coordinate * scale);
+            });
+
+            area.setAttribute('coords', scaledCoords.join(','));
+          });
+        };
+
+        if (mapImage.complete) {
+          scaleMapAreas();
+        } else {
+          mapImage.addEventListener('load', scaleMapAreas, { once: true });
+        }
+
+        window.addEventListener('resize', scaleMapAreas);
+      })();
+    </script>
+  </td>
+</LegacyShellLayout>
+
+<style>
+  .nav-cell {
+    width: 150px;
+    vertical-align: top;
+  }
+
+  .content-cell {
+    vertical-align: top;
+    padding-left: 8px;
+  }
+
+  h3 {
+    margin: 1em 0;
+    font-size: 1.17em;
+  }
+
+  p {
+    margin: 1em 0;
+    line-height: 1.4;
+  }
+
+  .navlevel1 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .navlevel2 {
+    font-size: 13px;
+  }
+
+  .world-map {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+  }
+</style>
