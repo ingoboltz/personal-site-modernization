@@ -1,138 +1,65 @@
 ---
+import LegacyShellLayout from '../../layouts/LegacyShellLayout.astro';
+
 const title = 'Academic record and transcripts';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="robots" content="index, follow" />
-    <style>
-      :global(*) {
-        box-sizing: border-box;
-      }
+<LegacyShellLayout title={title}>
+  <td class="content-cell" colspan="2">
+    <h2>Academic record and transcripts</h2>
 
-      :global(body) {
-        margin: 0;
-        background: #ffcc66;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #000;
-      }
+    <h3>Master's degree transcript / grades</h3>
+    <p>
+      You may also
+      <a href="/img/diploma.pdf">download the complete diploma (PDF)</a>, or compare my results
+      with the
+      <a href="/img/compare.jpg" target="_blank" rel="noreferrer">TU Dresden 1998 GPA Averages</a>.
+    </p>
+    <img
+      class="transcript-image"
+      src="/img/tu-diploma.jpg"
+      width="600"
+      height="850"
+      alt="Masters Degree Diploma TU Dresden"
+    />
 
-      :global(a:link) {
-        text-decoration: none;
-        color: #cc3300;
-      }
+    <h3>U.S. exchange year transcript / grades</h3>
+    <img
+      class="transcript-image"
+      src="/img/bu-transcript.gif"
+      width="600"
+      height="850"
+      alt="Certificate Boston University"
+    />
+  </td>
+</LegacyShellLayout>
 
-      :global(a:visited) {
-        text-decoration: none;
-        color: #cc3300;
-      }
+<style>
+  .content-cell {
+    vertical-align: top;
+    padding-left: 8px;
+  }
 
-      :global(a:active) {
-        text-decoration: none;
-        color: red;
-      }
+  h2 {
+    margin: 0.83em 0;
+    font-size: 1.5em;
+  }
 
-      :global(a:hover) {
-        text-decoration: underline;
-        color: red;
-      }
+  h3 {
+    margin: 1em 0;
+    font-size: 1.17em;
+  }
 
-      .legacy-shell {
-        width: 760px;
-        border-collapse: collapse;
-      }
+  p {
+    margin: 1em 0;
+  }
 
-      .spacer-cell {
-        width: 10px;
-      }
-
-      .logo-cell {
-        width: 150px;
-        vertical-align: top;
-      }
-
-      .header-space {
-        width: 600px;
-        height: 75px;
-      }
-
-      .left-space {
-        width: 20px;
-      }
-
-      .content-cell {
-        vertical-align: top;
-        padding-left: 8px;
-      }
-
-      h2 {
-        margin: 0.83em 0;
-        font-size: 1.5em;
-      }
-
-      h3 {
-        margin: 1em 0;
-        font-size: 1.17em;
-      }
-
-      p {
-        margin: 1em 0;
-      }
-
-      .transcript-image {
-        display: block;
-        margin: 0 0 2em;
-        max-width: 100%;
-        width: 600px;
-        height: auto;
-        border: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <table class="legacy-shell" border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td class="spacer-cell"><img src="/img/spc.gif" alt="" width="10" height="1" /></td>
-        <td class="logo-cell">
-          <a href="/">
-            <img src="/img/logo.gif" alt="" width="150" height="75" />
-          </a>
-        </td>
-        <td class="header-space"><img src="/img/spc.gif" alt="" width="600" height="75" /></td>
-      </tr>
-      <tr>
-        <td><img src="/img/spc.gif" alt="" class="left-space" width="20" height="200" /></td>
-        <td class="content-cell" colspan="2">
-          <h2>Academic record and transcripts</h2>
-
-          <h3>Master's degree transcript / grades</h3>
-          <p>
-            You may also
-            <a href="/img/diploma.pdf">download the complete diploma (PDF)</a>, or compare my
-            results with the
-            <a href="/img/compare.jpg" target="_blank" rel="noreferrer">TU Dresden 1998 GPA Averages</a>.
-          </p>
-          <img
-            class="transcript-image"
-            src="/img/tu-diploma.jpg"
-            width="600"
-            height="850"
-            alt="Masters Degree Diploma TU Dresden"
-          />
-
-          <h3>U.S. exchange year transcript / grades</h3>
-          <img
-            class="transcript-image"
-            src="/img/bu-transcript.gif"
-            width="600"
-            height="850"
-            alt="Certificate Boston University"
-          />
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>
+  .transcript-image {
+    display: block;
+    margin: 0 0 2em;
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    border: 0;
+  }
+</style>
