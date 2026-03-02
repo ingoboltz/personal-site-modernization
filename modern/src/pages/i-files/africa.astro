@@ -1,0 +1,105 @@
+---
+import LegacyShellLayout from '../../layouts/LegacyShellLayout.astro';
+
+const title = 'African Journal';
+const legacyBaseUrl = 'https://www.ingoboltz.com';
+---
+
+<LegacyShellLayout
+  title={title}
+  description="African Journal landing page with links to reports from South Africa (1998-2000)."
+>
+  <td class="nav-cell">
+    <div align="left">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr><td><a class="navlevel1" href="/i-files/">I-Files</a></td></tr>
+
+        <tr><td><img height="1" src="/img/spc.gif" width="10" alt="" /><a class="navlevel2" href="/i-files/africa">African Journal</a></td></tr>
+        <tr><td><img height="1" src="/img/spc.gif" width="10" alt="" /><a class="navlevel2" href={`${legacyBaseUrl}/i-files/japan.html`}>Japan Travel</a></td></tr>
+        <tr><td><img height="1" src="/img/spc.gif" width="10" alt="" /><a class="navlevel2" href={`${legacyBaseUrl}/i-files/australia.html`}><nobr>Australia Travel</nobr></a></td></tr>
+        <tr><td><img height="1" src="/img/spc.gif" width="10" alt="" /><a class="navlevel2" href={`${legacyBaseUrl}/i-files/sporadic.html`}><nobr>Sporadic Musings</nobr></a></td></tr>
+      </table>
+    </div>
+  </td>
+
+  <td class="content-cell" valign="top">
+    <h3 align="left">African Journal</h3>
+    <span class="text">
+      <div align="left">
+        Between September 1998 and December 1999 I served as a volunteer at a number of development and social work
+        projects in and around Pretoria, South Africa. The experience has been overwhelming, shocking, enlightening and
+        highly gratifying all at once. While I was "living Africa" I felt the need to share what moved me with all my friends
+        out there -- and this online journal was born. Below you find all the reports I sent back to the "outside world".
+        Enjoy reading, and let me know what you think!
+      </div>
+      <div align="left">&nbsp;</div>
+      <center>
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/africa1.html`}>Report 1: 13.9.1998</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/africa2.html`}>Report 2: 27.10.1998</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/africa3.html`}>Report 3: 08.11.1998</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/africa4.html`}>Report 4: 03.01.1999</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/africa5.html`}>Report 5: 02.03.1999</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/africa6.html`}>Report 6: 10.06.1999</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/africa7.html`}>Report 7: 21.10.1999</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/africa8.html`}>
+          Report 8: 13.06.2000 (travel report and final musings on my time in South Africa)
+        </a>
+      </center>
+      <center>&nbsp;</center>
+      <div align="left">&nbsp;</div>
+      <div align="left">
+        Die deutschen Versionen der Reports. Mein Bruder Marco hat die englischen Texte spontan uebersetzt und mir
+        zwecks Publikation zugeschickt. Ich stelle sie unveraendert hier zur Verfuegung fuer alle, die mit dem englischen
+        Original nicht so zurecht kommen. Viel Spass beim Lesen, und ein Dankeschoen an Marco!
+      </div>
+
+      <center>
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/d-africa1.html`}>Deutscher Report 1: 13.9.1998</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/d-africa2.html`}>Deutscher Report 2: 27.10.1998</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/d-africa3.html`}>Deutscher Report 3: 08.11.1998</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/d-africa4.html`}>Deutscher Report 4: 07.01.1999</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/d-africa5.html`}>Deutscher Report 5: 02.03.1999</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/d-africa6.html`}>Deutscher Report 6: 8.07.1999</a> <br />
+        <a class="navlevel1" href={`${legacyBaseUrl}/i-files/d-africa7.html`}>Deutscher Report 7: 4.11.1999</a>
+      </center>
+
+      <center>&nbsp;</center>
+      <div align="left">
+        Some Photos / Einige Photos. Thanks to my brother <a class="navlevel1" href="http://www.boltz-online.com/" target="_blank">Marco</a>
+        in Germany - he scanned the pictures for me!
+      </div>
+      <center><a class="navlevel1" href={`${legacyBaseUrl}/photos/photos_africa.htm`}>Photos - From Ubuntu Center.</a></center>
+    </span>
+  </td>
+</LegacyShellLayout>
+
+<style>
+  .nav-cell {
+    width: 150px;
+    vertical-align: top;
+  }
+
+  .content-cell {
+    vertical-align: top;
+    padding-left: 8px;
+  }
+
+  h3 {
+    margin: 1em 0;
+    font-size: 1.17em;
+  }
+
+  .text {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .navlevel1 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .navlevel2 {
+    font-size: 13px;
+  }
+</style>
