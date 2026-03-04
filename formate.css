@@ -111,3 +111,11 @@ h3  {
 	text-transform: none;
 	color: #FF3300;
 }
+
+/* Active nav item: same weight/size as navlevel1 but black — "you are here" */
+.navactive {
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-weight: bolder;
+	color: #000000;
+}
