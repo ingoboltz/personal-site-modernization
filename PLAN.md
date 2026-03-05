@@ -39,3 +39,9 @@ Keep as an illustration for a new **Sporadic Musings** entry about Palm V era lo
 
 ### 9. Phase 2 (Later)
 Export Buenos Aires blog and Argentina photos from Blogger.
+
+---
+
+## Cleanup Notes
+
+- **buch.html**: Content area has absolute image/PDF paths (`/img/buch.gif`, `/buch/jeremiah.pdf`, `/buch/jeremiah.rtf`) and two dead `cgi07.puretec.de` guestbook links — needs a content cleanup pass.
