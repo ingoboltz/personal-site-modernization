@@ -44,4 +44,10 @@ Export Buenos Aires blog and Argentina photos from Blogger.
 
 ## Cleanup Notes
 
-- **buch.html**: Content area has absolute image/PDF paths (`/img/buch.gif`, `/buch/jeremiah.pdf`, `/buch/jeremiah.rtf`) and two dead `cgi07.puretec.de` guestbook links — needs a content cleanup pass.
+- **buch.html**: Content area has absolute image/PDF paths (`/img/buch.gif`, `/buch/jeremiah.pdf`, `/buch/jeremiah.rtf`) and two dead `cgi07.puretec.de` guestbook links — needs a content cleanup pass. *(Fixed in cleanup pass.)*
+
+---
+
+## Future Sections
+
+- **buch.html → I-Files museum section**: Integrate buch.html into I-Files as its own museum section — Ingo's unfinished novel attempt from the early 2000s. Currently exists as a standalone root page. Should become part of the i-files archive alongside Africa, Australia etc.
