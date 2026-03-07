@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "You need a password. Email me. :)"
-AuthUserFile "/home/sites/36b/6/62a108f014/.htpasswds/i-files/consult/passwd"
-require valid-user
