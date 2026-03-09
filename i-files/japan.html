@@ -14,7 +14,7 @@
   table.layout > tbody > tr:first-child > td:first-child,
   table.layout > tbody > tr:first-child > td:last-child,
   table.layout > tbody > tr:last-child > td:first-child { display: none; }
-  table.sitenav { display: block; white-space: nowrap; width: auto !important; }
+  table.sitenav { display: block; white-space: nowrap; }
   table.sitenav > tbody { display: block; }
   table.sitenav > tbody > tr { display: inline; }
   table.sitenav > tbody > tr > td { display: inline; }
@@ -25,6 +25,10 @@
   table.sitenav > tbody > tr.subnav > td { display: block; }
   table.layout > tbody > tr:last-child > td img { max-width: 100%; height: auto; }
   table.layout > tbody > tr:last-child > td:last-child { padding: 0 8px; }
+
+  table:not(.layout):not(.sitenav) { width: 100% !important; }
+  table:not(.layout):not(.sitenav) td { display: block; width: 100% !important; box-sizing: border-box; }
+  table:not(.layout):not(.sitenav) td img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
 }
 	</style>
 </head>
