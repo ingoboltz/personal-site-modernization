@@ -15,7 +15,7 @@
   table.layout > tbody > tr:first-child > td:first-child,
   table.layout > tbody > tr:first-child > td:last-child,
   table.layout > tbody > tr:last-child > td:first-child { display: none; }
-  table.sitenav { display: block; }
+  table.sitenav { display: block; white-space: nowrap; }
   table.sitenav > tbody > tr { display: inline; }
   table.sitenav > tbody > tr > td { display: inline; }
   table.sitenav > tbody > tr:not(.subnav) > td::after { content: " \00B7"; color: #CC3300; }
@@ -98,6 +98,38 @@ And if you dig around in the musings, you'll also find the beginnings of a novel
 
 </table>
 
+<script type="text/javascript">
+(function() {
+  var img = document.querySelector('img[usemap]');
+  if (!img) return;
+  var mapName = img.getAttribute('usemap').replace('#', '');
+  var map = document.querySelector('map[name="' + mapName + '"]');
+  if (!map) return;
+  var areas = map.querySelectorAll('area');
+  var origCoords = [];
+  for (var i = 0; i < areas.length; i++) {
+    origCoords.push(areas[i].getAttribute('coords'));
+  }
+  function scaleMap() {
+    var naturalWidth = img.naturalWidth;
+    if (!naturalWidth) return;
+    var renderedWidth = img.offsetWidth;
+    var scale = renderedWidth / naturalWidth;
+    for (var i = 0; i < areas.length; i++) {
+      var scaled = origCoords[i].split(',').map(function(n) {
+        return Math.round(parseInt(n, 10) * scale);
+      }).join(',');
+      areas[i].setAttribute('coords', scaled);
+    }
+  }
+  if (img.complete && img.naturalWidth) {
+    scaleMap();
+  } else {
+    img.addEventListener('load', scaleMap);
+  }
+  window.addEventListener('resize', scaleMap);
+})();
+</script>
 
 </body>
 </html>
