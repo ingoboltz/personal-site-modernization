@@ -14,11 +14,15 @@
   table.layout > tbody > tr:first-child > td:first-child,
   table.layout > tbody > tr:first-child > td:last-child,
   table.layout > tbody > tr:last-child > td:first-child { display: none; }
-  table.sitenav { display: none; }
-  .mobile-nav { display: block; padding: 4px 0 8px; font-family: sans-serif; font-size: 9pt; }
-  .mobile-nav a { color: #CC3300; text-decoration: none; }
-  .mobile-nav a:hover { text-decoration: underline; color: red; }
-  .mobile-subnav { display: block; padding-left: 4px; color: #CC3300; font-family: sans-serif; font-size: 9pt; }
+  table.sitenav { display: block; white-space: nowrap; width: auto !important; }
+  table.sitenav > tbody { display: flex; flex-wrap: wrap; align-items: center; white-space: nowrap; width: auto !important; }
+  table.sitenav > tbody > tr { display: inline; }
+  table.sitenav > tbody > tr > td { display: inline; }
+  table.sitenav > tbody > tr:not(.subnav) > td::after { content: " \00B7"; color: #CC3300; }
+  table.sitenav > tbody > tr:not(.subnav):last-child > td::after { content: ""; }
+  table.sitenav > tbody > tr:has(+ tr.subnav) > td::after { content: ""; }
+  table.sitenav > tbody > tr.subnav { flex-basis: 100%; display: block; }
+  table.sitenav > tbody > tr.subnav > td { display: block; }
   table.layout > tbody > tr:last-child > td img { max-width: 100%; height: auto; }
   table.layout > tbody > tr:last-child > td:last-child { padding: 0 8px; }
 }
@@ -263,33 +267,5 @@ Keep well, and you'll hear from me!</p>
 <p>Ingo</p>
 
 </SPAN></TR></TABLE>
-<script>
-(function() {
-  function buildMobileNav() {
-    var existing = document.querySelector('.mobile-nav');
-    if (existing) existing.parentNode.removeChild(existing);
-    var nav = document.querySelector('table.sitenav');
-    if (!nav || window.innerWidth > 768) return;
-    var anchors = nav.querySelectorAll('tr:not(.subnav) a');
-    var subnavTd = nav.querySelector('tr.subnav td');
-    var div = document.createElement('div');
-    div.className = 'mobile-nav';
-    var parts = [];
-    for (var i = 0; i < anchors.length; i++) {
-      parts.push('<a href="' + anchors[i].getAttribute('href') + '">' + anchors[i].textContent + '</a>');
-    }
-    div.innerHTML = parts.join(' · ');
-    if (subnavTd) {
-      var span = document.createElement('span');
-      span.className = 'mobile-subnav';
-      span.textContent = subnavTd.textContent.trim();
-      div.appendChild(span);
-    }
-    nav.parentNode.insertBefore(div, nav);
-  }
-  document.addEventListener('DOMContentLoaded', buildMobileNav);
-  window.addEventListener('resize', buildMobileNav);
-})();
-</script>
 </body>
 </html>
