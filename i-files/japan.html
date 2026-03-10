@@ -18,10 +18,14 @@
   table.sitenav > tbody { display: grid; grid-template-columns: auto auto auto; grid-template-rows: auto auto; width: fit-content; }
   table.sitenav > tbody > tr { display: contents; }
   table.sitenav > tbody > tr > td { display: block; white-space: nowrap; }
-  table.sitenav > tbody > tr:not(.subnav) > td::after { content: " \00B7 "; color: #CC3300; }
+  table.sitenav > tbody > tr:not(.subnav):nth-child(1) > td { grid-column: 1; grid-row: 1; }
+  table.sitenav > tbody > tr:not(.subnav):nth-child(2) > td { grid-column: 2; grid-row: 1; }
+  table.sitenav > tbody > tr:not(.subnav):nth-child(3) > td { grid-column: 3; grid-row: 1; }
+  table.sitenav > tbody > tr:not(.subnav):nth-child(4) > td { grid-column: 3; grid-row: 1; }
+  table.sitenav > tbody > tr:not(.subnav) > td::after { content: " · "; color: #CC3300; }
   table.sitenav > tbody > tr:not(.subnav):last-child > td::after { content: ""; }
   table.sitenav > tbody > tr:has(+ tr.subnav) > td::after { content: ""; }
-  table.sitenav > tbody > tr.subnav > td { grid-column: 1 / -1; display: block; white-space: nowrap; }
+  table.sitenav > tbody > tr.subnav > td { grid-column: 1 / -1; grid-row: 2; display: block; white-space: nowrap; }
   table.layout > tbody > tr:last-child > td img { max-width: 100%; height: auto; }
   table.layout > tbody > tr:last-child > td:last-child { padding: 0 8px; }
 
