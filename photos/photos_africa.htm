@@ -5,10 +5,61 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>i-files</title>
 	<link href="../formate.css" rel="STYLESHEET" type="text/css">
+	<style type="text/css">
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+.photo-item {
+  text-align: center;
+  vertical-align: bottom;
+}
+.photo-item a {
+  display: block;
+  text-align: center;
+}
+.photo-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.photo-item .caption {
+  display: block;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: x-small;
+}
+@media (max-width: 768px) {
+  body { margin: 0; }
+  table.layout { display: block; width: 100% !important; }
+  table.layout > tbody > tr { display: block; }
+  table.layout > tbody > tr > td { display: block; width: 100% !important; box-sizing: border-box; }
+  table.layout > tbody > tr:first-child > td:first-child,
+  table.layout > tbody > tr:first-child > td:last-child,
+  table.layout > tbody > tr:last-child > td:first-child { display: none; }
+  table.sitenav { display: block; margin-bottom: 8px; }
+  table.sitenav > tbody { display: grid; grid-template-columns: auto auto auto; grid-template-rows: auto auto; width: fit-content; align-items: baseline; }
+  table.sitenav > tbody > tr { display: contents; }
+  table.sitenav > tbody > tr > td { display: block; white-space: nowrap; padding-right: 4px; }
+  table.sitenav > tbody > tr:not(.subnav):nth-child(1) > td { grid-column: 1; grid-row: 1; }
+  table.sitenav > tbody > tr:not(.subnav):nth-child(2) > td { grid-column: 2; grid-row: 1; }
+  table.sitenav > tbody > tr:not(.subnav):nth-child(3) > td { grid-column: 3; grid-row: 1; }
+  table.sitenav > tbody > tr:not(.subnav):nth-child(4) > td { grid-column: 3; grid-row: 1; }
+  table.sitenav > tbody > tr.subnav > td { grid-row: 2; grid-column: 2 / -1; display: block; white-space: nowrap; }
+  table.layout > tbody > tr:last-child > td img { max-width: 100%; height: auto; }
+  table.layout > tbody > tr:last-child > td:last-child { padding: 0 8px; }
+  .photo-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+	</style>
 </head>
 
 <body leftmargin=0 topmargin=0 marginwidth="0" marginheight="0" bgcolor="#ffcc66">
-<table border="0" cellspacing="0" cellpadding="0" width="760">
+<table class="layout" border="0" cellspacing="0" cellpadding="0" width="760">
 <tr>
 	<td width="10"><IMG height=1 src="../img/spc.gif" width=10></TD>
 	<td width="150" valign="top"><A href="../index.html"><IMG alt="" border=0 height=75 src="../img/logo.gif" width=150></A></TD>
@@ -16,45 +67,39 @@
 <tr>
 	<td></TD>
 	<td valign="top">
-	<table width="137" border="0" cellpadding="0" cellspacing="0">
+	<table class="sitenav" border="0" cellpadding="0" cellspacing="0">
 		<tr><td><a href="../index.html" class="navlevel1">Home</a></td></tr>
 		<tr><td><a href="../i-files.html" class="navlevel1">I-Files</a></td></tr>
+		<tr class="subnav"><td style="padding-left:8px; font-family:sans-serif; font-size:9pt; color:#CC3300;">&#9492; South Africa</td></tr>
 		<tr><td><a href="../guestbook.html" class="navlevel1">Guestbook</a></td></tr>
 	</table>
 </td>
 	<td valign="top">
 		<h3 align=left>Photos of South Africa</H3>
-		<TABLE>
-<P>
-<TR><TD ALIGN=CENTER><TABLE>
-<TR>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="action.jpg"><IMG SRC="TN_action.JPG" ALT="action.jpg"><BR>action.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="boys.jpg"><IMG SRC="TN_boys.JPG" ALT="boys.jpg"><BR>boys.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="cactus.jpg"><IMG SRC="TN_cactus.JPG" ALT="cactus.jpg"><BR>cactus.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="egg.jpg"><IMG SRC="TN_egg.JPG" ALT="egg.jpg"><BR>egg.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="egg2.jpg"><IMG SRC="TN_egg2.JPG" ALT="egg2.jpg"><BR>egg2.jpg</A></FONT></TD>
-</TR>
-<TR>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="fence.jpg"><IMG SRC="TN_fence.JPG" ALT="fence.jpg"><BR>fence.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="furneral.jpg"><IMG SRC="TN_furneral.JPG" ALT="furneral.jpg"><BR>furneral.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="hospice.jpg"><IMG SRC="TN_hospice.JPG" ALT="hospice.jpg"><BR>hospice.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="nature.jpg"><IMG SRC="TN_nature.JPG" ALT="nature.jpg"><BR>nature.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="painted.jpg"><IMG SRC="TN_painted.JPG" ALT="painted.jpg"><BR>painted.jpg</A></FONT></TD>
-</TR>
-<TR>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="princess.jpg"><IMG SRC="TN_princess.JPG" ALT="princess.jpg"><BR>princess.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="rover.jpg"><IMG SRC="TN_rover.JPG" ALT="rover.jpg"><BR>rover.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="sophia.jpg"><IMG SRC="TN_sophia.JPG" ALT="sophia.jpg"><BR>sophia.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="sophia2.jpg"><IMG SRC="TN_sophia2.JPG" ALT="sophia2.jpg"><BR>sophia2.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="trees.jpg"><IMG SRC="TN_trees.JPG" ALT="trees.jpg"><BR>trees.jpg</A></FONT></TD>
-</TR>
-<TR>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="tship.jpg"><IMG SRC="TN_tship.JPG" ALT="tship.jpg"><BR>tship.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="ubuntu.jpg"><IMG SRC="TN_ubuntu.JPG" ALT="ubuntu.jpg"><BR>ubuntu.jpg</A></FONT></TD>
-<TD ALIGN=CENTER VALIGN=BOTTOM><FONT face="Verdana, Arial, Helvetica, Sans-Serif" size="-2"><A HREF="waran.jpg"><IMG SRC="TN_waran.JPG" ALT="waran.jpg"><BR>waran.jpg</A></FONT></TD>
-</TABLE></TD></TR>
-<P><TR><TD ALIGN=CENTER><TR><TD ALIGN=CENTER></TD></TR></SPAN></TR></TABLE>
-
-
+		<div class="photo-grid">
+			<div class="photo-item"><a href="action.jpg"><img src="TN_action.JPG" alt="action.jpg"><span class="caption">action.jpg</span></a></div>
+			<div class="photo-item"><a href="boys.jpg"><img src="TN_boys.JPG" alt="boys.jpg"><span class="caption">boys.jpg</span></a></div>
+			<div class="photo-item"><a href="cactus.jpg"><img src="TN_cactus.JPG" alt="cactus.jpg"><span class="caption">cactus.jpg</span></a></div>
+			<div class="photo-item"><a href="egg.jpg"><img src="TN_egg.JPG" alt="egg.jpg"><span class="caption">egg.jpg</span></a></div>
+			<div class="photo-item"><a href="egg2.jpg"><img src="TN_egg2.JPG" alt="egg2.jpg"><span class="caption">egg2.jpg</span></a></div>
+			<div class="photo-item"><a href="fence.jpg"><img src="TN_fence.JPG" alt="fence.jpg"><span class="caption">fence.jpg</span></a></div>
+			<div class="photo-item"><a href="furneral.jpg"><img src="TN_furneral.JPG" alt="furneral.jpg"><span class="caption">furneral.jpg</span></a></div>
+			<div class="photo-item"><a href="hospice.jpg"><img src="TN_hospice.JPG" alt="hospice.jpg"><span class="caption">hospice.jpg</span></a></div>
+			<div class="photo-item"><a href="nature.jpg"><img src="TN_nature.JPG" alt="nature.jpg"><span class="caption">nature.jpg</span></a></div>
+			<div class="photo-item"><a href="painted.jpg"><img src="TN_painted.JPG" alt="painted.jpg"><span class="caption">painted.jpg</span></a></div>
+			<div class="photo-item"><a href="princess.jpg"><img src="TN_princess.JPG" alt="princess.jpg"><span class="caption">princess.jpg</span></a></div>
+			<div class="photo-item"><a href="rover.jpg"><img src="TN_rover.JPG" alt="rover.jpg"><span class="caption">rover.jpg</span></a></div>
+			<div class="photo-item"><a href="sophia.jpg"><img src="TN_sophia.JPG" alt="sophia.jpg"><span class="caption">sophia.jpg</span></a></div>
+			<div class="photo-item"><a href="sophia2.jpg"><img src="TN_sophia2.JPG" alt="sophia2.jpg"><span class="caption">sophia2.jpg</span></a></div>
+			<div class="photo-item"><a href="trees.jpg"><img src="TN_trees.JPG" alt="trees.jpg"><span class="caption">trees.jpg</span></a></div>
+			<div class="photo-item"><a href="tship.jpg"><img src="TN_tship.JPG" alt="tship.jpg"><span class="caption">tship.jpg</span></a></div>
+			<div class="photo-item"><a href="ubuntu.jpg"><img src="TN_ubuntu.JPG" alt="ubuntu.jpg"><span class="caption">ubuntu.jpg</span></a></div>
+			<div class="photo-item"><a href="waran.jpg"><img src="TN_waran.JPG" alt="waran.jpg"><span class="caption">waran.jpg</span></a></div>
+		</div>
+	</TD></TR>
+<!-- tr>
+	<td></td>
+	<td valign="top" colspan="2">Futter</td>
+</tr --></TABLE>
 </body>
 </html>
