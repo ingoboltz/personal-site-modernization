@@ -15,12 +15,14 @@
   table.layout > tbody > tr:first-child > td:first-child,
   table.layout > tbody > tr:first-child > td:last-child,
   table.layout > tbody > tr:last-child > td:first-child { display: none; }
-  table.sitenav { display: block; white-space: nowrap; width: auto !important; }
-  table.sitenav > tbody { display: flex; flex-wrap: wrap; align-items: center; white-space: nowrap; width: auto !important; }
-  table.sitenav > tbody > tr { display: block; }
-  table.sitenav > tbody > tr > td { display: block; }
-  table.sitenav > tbody > tr:not(.subnav) > td::after { content: " \00B7"; color: #CC3300; }
+  table.sitenav { display: block; }
+  table.sitenav > tbody { display: grid; grid-template-columns: auto auto auto; grid-template-rows: auto auto; width: fit-content; }
+  table.sitenav > tbody > tr { display: contents; }
+  table.sitenav > tbody > tr > td { display: block; white-space: nowrap; }
+  table.sitenav > tbody > tr:not(.subnav) > td::after { content: " \00B7 "; color: #CC3300; }
   table.sitenav > tbody > tr:not(.subnav):last-child > td::after { content: ""; }
+  table.sitenav > tbody > tr:has(+ tr.subnav) > td::after { content: ""; }
+  table.sitenav > tbody > tr.subnav > td { grid-column: 1 / -1; display: block; white-space: nowrap; }
   table.layout > tbody > tr:last-child > td:last-child { padding: 0 8px; }
 }
 	</style>
