@@ -1,0 +1,12 @@
+<Files "sporadic-swiss.html">
+    AuthType Basic
+    AuthName "Protected"
+    AuthUserFile /home/sites/36b/6/62a108f014/.htpasswd
+    Require valid-user
+</Files>
+<Files "sporadic-consult.html">
+    AuthType Basic
+    AuthName "Protected"
+    AuthUserFile /home/sites/36b/6/62a108f014/.htpasswd
+    Require valid-user
+</Files>
